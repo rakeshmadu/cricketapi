@@ -51,16 +51,6 @@ def get_right(request):
         data.append(doc)
     return JsonResponse(data,safe=False)
 
-#get added player 
-# @api_view(['GET'])
-# def get_fav(request):
-#     collection = db['players']
-#     cursor = collection.find({"fav":"dhoni"})
-#     data = []
-#     for doc in cursor:
-#         doc.pop("_id")
-#         data.append(doc)
-#     return JsonResponse(data,safe=False)
     
 #players who born in the year 1987
 @api_view(['GET'])
@@ -90,13 +80,6 @@ def get_btw(request):
         doc.pop("_id")
         data.append(doc)
     return JsonResponse(data,safe=False)
-
-# @api_view(['POST'])
-# def post_fav(request):
-#     collection = db['players']
-
-#     cursor = collection.insert({})
-#     return JsonResponse(data,safe=False)
 
 @api_view(['POST'])
 def post_fav(request):
